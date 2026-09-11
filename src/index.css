@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --apple-bg: #f5f5f7;
+    --apple-surface: #ffffff;
+    --apple-surface-secondary: #fbfbfd;
+    --apple-text: #1d1d1f;
+    --apple-subtext: #86868b;
+    --apple-border: rgba(0, 0, 0, 0.08);
+    --apple-border-strong: rgba(0, 0, 0, 0.16);
+    --apple-blue: #0071e3;
+    --apple-blue-hover: #0077ed;
+  }
+
+  .dark {
+    --apple-bg: #000000;
+    --apple-surface: #161617;
+    --apple-surface-secondary: #1d1d1f;
+    --apple-text: #f5f5f7;
+    --apple-subtext: #86868b;
+    --apple-border: rgba(255, 255, 255, 0.12);
+    --apple-border-strong: rgba(255, 255, 255, 0.24);
+    --apple-blue: #2997ff;
+    --apple-blue-hover: #47a6ff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Cairo", "Plus Jakarta Sans", system-ui, sans-serif;
+    letter-spacing: -0.01em;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+}
+
+/* Apple-style custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Apple signature frosted glass nav */
+.apple-glass {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.dark .apple-glass {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Apple Hardware Device Bezels */
+.apple-device-frame {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 30px 60px -12px rgba(0, 0, 0, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+}
+
+.dark .apple-device-frame {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 30px 70px -12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(41, 151, 255, 0.1);
+}
+

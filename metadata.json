@@ -1,0 +1,6 @@
+{
+  "name": "ALMOQ3 ERP — نظام إدارة وكالات التوزيع والمواد الغذائية",
+  "description": "منظومة ALMOQ3 الرقمية الشاملة لإدارة وكالات التوزيع والمواد الغذائية وسلاسل التوريد مع 37 وحدة متخصصة و4 منصات تدعم العمل الميداني بدون إنترنت.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

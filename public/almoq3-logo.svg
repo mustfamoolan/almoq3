@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="100%" height="100%" fill="none">
+  <!-- ALMOQ3 ERP Official Geometric Logo -->
+  <defs>
+    <!-- Sharp crisp render -->
+  </defs>
+
+  <!-- 1. Top Cyan Wedge (Upper inner counter of A) -->
+  <polygon 
+    points="400,28 264,324 550,324" 
+    fill="#00B4F0" 
+  />
+
+  <!-- 2. Bottom-Right Cyan Block -->
+  <polygon 
+    points="660,740 910,740 1000,900 660,900" 
+    fill="#00B4F0" 
+  />
+
+  <!-- 3. Dark Navy A-Frame & Right Leg -->
+  <!-- 
+    Apex at (500, 0). 
+    Right leg goes down along right diagonal to (910, 740), 
+    across to (770, 740), 
+    up parallel inner diagonal to (580, 400), 
+    across crossbar to left leg.
+  -->
+  <path
+    d="
+      M 500,0
+      L 910,740
+      L 770,740
+      L 580,400
+      L 580,324
+      L 264,324
+      L 400,28
+      L 500,0
+      Z
+    "
+    fill="#12273D"
+  />
+
+  <!-- 4. Crossbar & Left A-Leg with diagonal bottom slit -->
+  <path
+    d="
+      M 264,324
+      L 580,324
+      L 580,466
+      L 348,466
+      L 348,740
+      L 405,740
+      L 476,900
+      L 0,900
+      L 182,466
+      L 264,324
+      Z
+    "
+    fill="#12273D"
+  />
+
+  <!-- 5. Dark Navy Central "3" Glyph -->
+  <path
+    d="
+      M 348,466
+      L 600,466
+      L 650,544
+      L 538,628
+      C 612,636 670,676 670,746
+      C 670,828 596,878 496,878
+      L 436,750
+      C 476,750 530,744 530,708
+      C 530,674 490,664 446,664
+      L 416,624
+      L 500,544
+      L 348,544
+      Z
+    "
+    fill="#12273D"
+  />
+</svg>
