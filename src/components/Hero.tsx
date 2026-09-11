@@ -21,63 +21,67 @@ export const Hero: React.FC<HeroProps> = ({ onScrollTo, onOpenDemo }) => {
   const [activeTab, setActiveTab] = useState<'desktop' | 'sales' | 'driver' | 'loader'>('desktop');
 
   return (
-    <section id="hero" className="relative pt-16 pb-24 sm:pt-20 sm:pb-32 overflow-hidden">
+    <section id="hero" className="relative pt-12 pb-20 sm:pt-20 sm:pb-32 overflow-hidden">
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         
         {/* Apple-style Eyebrow with Brand Logo */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] border border-black/[0.06] dark:border-white/[0.08] mb-4">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] border border-black/[0.06] dark:border-white/[0.08] mb-4 max-w-full">
           <Almoq3Logo size={16} />
-          <span className="text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-wider uppercase">
+          <span className="text-[11px] sm:text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-wider uppercase truncate">
             ALMOQ3 ERP Pro — الجيل الجديد
           </span>
         </div>
 
         {/* Apple Big Headline */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight leading-[1.08] mb-5">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight leading-[1.15] sm:leading-[1.08] mb-4 sm:mb-5">
           عبقرية في التوزيع. <br className="hidden sm:inline" />
           <span className="text-black/80 dark:text-white/80">هندسة لا تتوقف.</span>
         </h1>
 
         {/* Apple Sub-headline */}
-        <p className="text-lg sm:text-xl md:text-2xl text-[#86868b] font-normal leading-relaxed max-w-3xl mx-auto mb-8">
+        <p className="text-sm sm:text-lg md:text-xl text-[#86868b] font-normal leading-relaxed max-w-3xl mx-auto mb-7 sm:mb-8 px-2">
           منظومة رقمية شاملة تضم 37 وحدة متخصصة و4 منصات متزامنة تعمل بكفاءة تامة بدون إنترنت، صُممت خصيصاً لوكالات التوزيع الكبرى وسلاسل إمداد الأغذية.
         </p>
 
         {/* Apple CTA Row */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-16 text-base">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-12 sm:mb-16 text-sm sm:text-base w-full max-w-md sm:max-w-none mx-auto">
           <button
             onClick={onOpenDemo}
-            className="bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium px-7 py-3 rounded-full transition-all shadow-xs hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+            className="w-full sm:w-auto bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium px-7 py-3.5 sm:py-3 rounded-full transition-all shadow-xs hover:scale-[1.02] active:scale-[0.98] cursor-pointer min-h-[44px] flex items-center justify-center text-sm"
           >
             طلب استشارة وعرض تجريبي
           </button>
 
-          <button
-            onClick={() => onScrollTo('platforms')}
-            className="text-[#0071e3] dark:text-[#2997ff] hover:underline font-medium inline-flex items-center gap-1 cursor-pointer"
-          >
-            <span>استكشف المنصات الأربعة</span>
-            <ChevronRight className="w-4 h-4 rotate-180" />
-          </button>
+          <div className="flex items-center justify-center gap-4 text-xs sm:text-sm pt-1 sm:pt-0">
+            <button
+              onClick={() => onScrollTo('platforms')}
+              className="text-[#0071e3] dark:text-[#2997ff] hover:underline font-medium inline-flex items-center gap-1 cursor-pointer py-1"
+            >
+              <span>المنصات الأربعة</span>
+              <ChevronRight className="w-4 h-4 rotate-180" />
+            </button>
 
-          <button
-            onClick={() => onScrollTo('modules')}
-            className="text-[#0071e3] dark:text-[#2997ff] hover:underline font-medium inline-flex items-center gap-1 cursor-pointer"
-          >
-            <span>دليل الـ 37 وحدة</span>
-            <ChevronRight className="w-4 h-4 rotate-180" />
-          </button>
+            <span className="text-[#86868b]">•</span>
+
+            <button
+              onClick={() => onScrollTo('modules')}
+              className="text-[#0071e3] dark:text-[#2997ff] hover:underline font-medium inline-flex items-center gap-1 cursor-pointer py-1"
+            >
+              <span>دليل الـ 37 وحدة</span>
+              <ChevronRight className="w-4 h-4 rotate-180" />
+            </button>
+          </div>
         </div>
 
         {/* Apple-style Stats Ribbon */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16 py-6 border-y border-black/[0.08] dark:border-white/[0.1]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12 sm:mb-16 py-4 sm:py-6 border-y border-black/[0.08] dark:border-white/[0.1]">
           {SYSTEM_STATS.map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl sm:text-4xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight mb-1">
+            <div key={i} className="text-center p-1">
+              <div className="text-2xl sm:text-4xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] tracking-tight mb-0.5 sm:mb-1">
                 {stat.value}
               </div>
-              <div className="text-xs sm:text-sm text-[#86868b] font-normal">
+              <div className="text-[11px] sm:text-sm text-[#86868b] font-normal">
                 {stat.label}
               </div>
             </div>
@@ -86,79 +90,81 @@ export const Hero: React.FC<HeroProps> = ({ onScrollTo, onOpenDemo }) => {
 
         {/* Apple Hardware Device Mockup Frame (Studio Display / Titanium Pro) */}
         <div className="max-w-5xl mx-auto">
-          <div className="apple-device-frame p-2 sm:p-3 rounded-[32px] sm:rounded-[40px] bg-[#e5e5ea] dark:bg-[#2c2c2e] border border-black/10 dark:border-white/15">
+          <div className="apple-device-frame p-1.5 sm:p-3 rounded-[24px] sm:rounded-[40px] bg-[#e5e5ea] dark:bg-[#2c2c2e] border border-black/10 dark:border-white/15">
             
             {/* Inner Screen */}
-            <div className="bg-white dark:bg-[#161617] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-black/5 dark:border-white/10 text-right">
+            <div className="bg-white dark:bg-[#161617] rounded-[20px] sm:rounded-[32px] overflow-hidden border border-black/5 dark:border-white/10 text-right">
               
               {/* Screen Top Bar / Segmented Switcher */}
-              <div className="px-5 py-4 border-b border-black/[0.06] dark:border-white/[0.08] bg-[#fbfbfd] dark:bg-[#1a1a1c] flex flex-wrap items-center justify-between gap-3">
+              <div className="px-3 sm:px-5 py-3 sm:py-4 border-b border-black/[0.06] dark:border-white/[0.08] bg-[#fbfbfd] dark:bg-[#1a1a1c] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
-                  <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-                  <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
-                  <div className="flex items-center gap-1.5 mr-2">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ff5f56]" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ffbd2e]" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#27c93f]" />
+                  <div className="flex items-center gap-1.5 mr-1.5 sm:mr-2">
                     <Almoq3Logo size={14} />
-                    <span className="text-xs font-medium text-[#1d1d1f] dark:text-[#f5f5f7]">
-                      ALMOQ3 OS Live Simulation
+                    <span className="text-[11px] sm:text-xs font-medium text-[#1d1d1f] dark:text-[#f5f5f7]">
+                      محاكاة المنظومة الحية (ALMOQ3 OS)
                     </span>
                   </div>
                 </div>
 
-                {/* Apple Segmented Control Pill */}
-                <div className="bg-[#e8e8ed] dark:bg-[#262629] p-1 rounded-full inline-flex items-center gap-1 text-xs">
-                  <button
-                    onClick={() => setActiveTab('desktop')}
-                    className={`px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                      activeTab === 'desktop'
-                        ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
-                        : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
-                    }`}
-                  >
-                    <Monitor className="w-3.5 h-3.5" />
-                    <span>سطح المكتب</span>
-                  </button>
+                {/* Apple Segmented Control Pill with horizontal scroll on small devices */}
+                <div className="w-full sm:w-auto overflow-x-auto scrollbar-none pb-0.5">
+                  <div className="bg-[#e8e8ed] dark:bg-[#262629] p-1 rounded-full inline-flex items-center gap-1 text-xs">
+                    <button
+                      onClick={() => setActiveTab('desktop')}
+                      className={`px-3 sm:px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 shrink-0 text-[11px] sm:text-xs min-h-[34px] ${
+                        activeTab === 'desktop'
+                          ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
+                          : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
+                      }`}
+                    >
+                      <Monitor className="w-3.5 h-3.5" />
+                      <span>سطح المكتب</span>
+                    </button>
 
-                  <button
-                    onClick={() => setActiveTab('sales')}
-                    className={`px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                      activeTab === 'sales'
-                        ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
-                        : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
-                    }`}
-                  >
-                    <Smartphone className="w-3.5 h-3.5" />
-                    <span>المندوب</span>
-                  </button>
+                    <button
+                      onClick={() => setActiveTab('sales')}
+                      className={`px-3 sm:px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 shrink-0 text-[11px] sm:text-xs min-h-[34px] ${
+                        activeTab === 'sales'
+                          ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
+                          : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
+                      }`}
+                    >
+                      <Smartphone className="w-3.5 h-3.5" />
+                      <span>المندوب</span>
+                    </button>
 
-                  <button
-                    onClick={() => setActiveTab('driver')}
-                    className={`px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                      activeTab === 'driver'
-                        ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
-                        : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
-                    }`}
-                  >
-                    <Truck className="w-3.5 h-3.5" />
-                    <span>السائق</span>
-                  </button>
+                    <button
+                      onClick={() => setActiveTab('driver')}
+                      className={`px-3 sm:px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 shrink-0 text-[11px] sm:text-xs min-h-[34px] ${
+                        activeTab === 'driver'
+                          ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
+                          : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
+                      }`}
+                    >
+                      <Truck className="w-3.5 h-3.5" />
+                      <span>السائق</span>
+                    </button>
 
-                  <button
-                    onClick={() => setActiveTab('loader')}
-                    className={`px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 ${
-                      activeTab === 'loader'
-                        ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
-                        : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
-                    }`}
-                  >
-                    <PackageCheck className="w-3.5 h-3.5" />
-                    <span>المجهّز FEFO</span>
-                  </button>
+                    <button
+                      onClick={() => setActiveTab('loader')}
+                      className={`px-3 sm:px-3.5 py-1.5 rounded-full font-medium transition cursor-pointer flex items-center gap-1.5 shrink-0 text-[11px] sm:text-xs min-h-[34px] ${
+                        activeTab === 'loader'
+                          ? 'bg-white dark:bg-[#161617] text-[#1d1d1f] dark:text-[#f5f5f7] shadow-xs'
+                          : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7]'
+                      }`}
+                    >
+                      <PackageCheck className="w-3.5 h-3.5" />
+                      <span>المجهّز FEFO</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
               {/* Screen Body */}
-              <div className="p-6 sm:p-10">
+              <div className="p-4 sm:p-8 lg:p-10">
                 {activeTab === 'desktop' && (
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div className="lg:col-span-7 space-y-4 text-right">
@@ -172,7 +178,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollTo, onOpenDemo }) => {
                         لوحة قيادة مركزية فائقة السرعة تتيح المطابقة الثلاثية لفواتير الشراء، إدارة شجرة الحسابات وقيود اليومية التلقائية، تتبع سيولة الصناديق والمصارف، ومراقبة أعمار الذمم اللحظية.
                       </p>
                       
-                      <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
                         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#f5f5f7] dark:bg-[#1d1d1f]">
                           <div className="w-4 h-4 rounded-full bg-[#0071e3]/10 dark:bg-[#2997ff]/20 text-[#0071e3] dark:text-[#2997ff] flex items-center justify-center shrink-0">
                             <Check className="w-2.5 h-2.5" />
@@ -241,7 +247,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollTo, onOpenDemo }) => {
                         محرك SQLite محلي فائق السرعة يتيح للمندوب تسجيل الزيارات عبر الـ GPS، وتطبيق العروض والبونص فورياً، وإصدار سندات القبض والطباعة الحرارية حتى في أشد المناطق عزلة عن شبكات الاتصال.
                       </p>
                       
-                      <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
                         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#f5f5f7] dark:bg-[#1d1d1f]">
                           <div className="w-4 h-4 rounded-full bg-[#34c759]/20 text-[#34c759] flex items-center justify-center shrink-0">
                             <Check className="w-2.5 h-2.5" />
@@ -312,7 +318,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollTo, onOpenDemo }) => {
                         تنظيم رحلات التوصيل اليومية خطوة بخطوة مع مسار الخرائط الأمثل، تسجيل المردودات الجزئية في الميدان فوريًا، وتوقيع إلكتروني لالتقاط إثبات الاستلام ومطابقة الصندوق عند العودة للمستودع.
                       </p>
                       
-                      <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
                         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#f5f5f7] dark:bg-[#1d1d1f]">
                           <div className="w-4 h-4 rounded-full bg-[#ff9500]/20 text-[#ff9500] flex items-center justify-center shrink-0">
                             <Check className="w-2.5 h-2.5" />
@@ -376,7 +382,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollTo, onOpenDemo }) => {
                         توجيه الحمالين آلياً عبر مسارات الممرات لسحب الوجبات الأقرب انتهاءً أولاً، مع مطابقة باركود الصنف والكرتونة، لضمان صفر هدر في المواد سريعة التلف ومنتجات الألبان.
                       </p>
                       
-                      <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-2 text-xs text-[#1d1d1f] dark:text-[#f5f5f7]">
                         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#f5f5f7] dark:bg-[#1d1d1f]">
                           <div className="w-4 h-4 rounded-full bg-[#af52de]/20 text-[#af52de] flex items-center justify-center shrink-0">
                             <Check className="w-2.5 h-2.5" />

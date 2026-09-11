@@ -82,11 +82,11 @@ export const DifferentiatorsSection: React.FC = () => {
         </div>
 
         {/* Bento / Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {differentiators.map((diff, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-[#161617] rounded-[24px] border border-black/[0.06] dark:border-white/[0.08] p-7 flex flex-col justify-between hover:border-black/[0.12] dark:hover:border-white/[0.16] transition-all duration-200 shadow-xs hover:shadow-md group text-right"
+              className="bg-white dark:bg-[#161617] rounded-[22px] sm:rounded-[24px] border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-7 flex flex-col justify-between hover:border-black/[0.12] dark:hover:border-white/[0.16] transition-all duration-200 shadow-xs hover:shadow-md group text-right"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">

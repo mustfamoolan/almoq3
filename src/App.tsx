@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MessageCircle } from 'lucide-react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { PlatformsSection } from './components/PlatformsSection';
@@ -111,6 +112,20 @@ export default function App() {
         isOpen={demoModalOpen}
         onClose={() => setDemoModalOpen(false)}
       />
+
+      {/* Floating WhatsApp Action for Mobile screens */}
+      <div className="fixed bottom-5 left-5 z-40 sm:hidden">
+        <a
+          href="https://wa.me/9647737777424?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%86%D8%B8%D8%A7%D9%85%20ALMOQ3%20ERP"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white px-4 py-2.5 rounded-full shadow-lg border border-white/20 transition-all font-medium text-xs cursor-pointer"
+          aria-label="تواصل عبر واتساب"
+        >
+          <MessageCircle className="w-4 h-4 fill-white" />
+          <span>تواصل واتساب</span>
+        </a>
+      </div>
     </div>
   );
 }

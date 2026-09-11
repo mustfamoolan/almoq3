@@ -39,7 +39,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
           
           {/* Controls Box */}
-          <div className="lg:col-span-7 bg-white dark:bg-[#161617] rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-8 space-y-6 shadow-xs text-right">
+          <div className="lg:col-span-7 bg-white dark:bg-[#161617] rounded-[24px] sm:rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-8 space-y-6 shadow-xs text-right">
             <h3 className="text-base font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] border-b border-black/[0.06] dark:border-white/[0.08] pb-4">
               مؤشرات الأسطول والفريق التشغيلي:
             </h3>
@@ -127,34 +127,34 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
           </div>
 
           {/* Results Box (Apple Pro Card) */}
-          <div className="lg:col-span-5 bg-[#1c1c1e] text-[#f5f5f7] rounded-[32px] p-8 flex flex-col justify-between shadow-xl space-y-6 text-right border border-white/10">
+          <div className="lg:col-span-5 bg-[#1c1c1e] text-[#f5f5f7] rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 flex flex-col justify-between shadow-xl space-y-6 text-right border border-white/10">
             <div>
               <div className="text-xs font-semibold text-[#2997ff] uppercase tracking-wider mb-1">
                 التقدير التشغيلي المباشر
               </div>
-              <h3 className="text-xl font-semibold text-white mb-6">
+              <h3 className="text-xl font-semibold text-white mb-5 sm:mb-6">
                 مؤشرات الكفاءة المتوقعة
               </h3>
 
-              <div className="space-y-3 text-xs">
-                <div className="bg-white/[0.06] p-4 rounded-2xl flex justify-between items-center border border-white/[0.05]">
+              <div className="space-y-2.5 sm:space-y-3 text-xs">
+                <div className="bg-white/[0.06] p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex justify-between items-center border border-white/[0.05]">
                   <span className="text-[#86868b]">الأجهزة الميدانية المتزامنة:</span>
-                  <span className="text-base font-semibold text-white">{totalMobileUsers} جهاز نشط</span>
+                  <span className="text-sm sm:text-base font-semibold text-white">{totalMobileUsers} جهاز نشط</span>
                 </div>
 
-                <div className="bg-white/[0.06] p-4 rounded-2xl flex justify-between items-center border border-white/[0.05]">
+                <div className="bg-white/[0.06] p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex justify-between items-center border border-white/[0.05]">
                   <span className="text-[#86868b]">طاقة الفواتير اليومية:</span>
-                  <span className="text-base font-semibold text-[#34c759]">~{dailyInvoicesEst.toLocaleString()} فاتورة/يوم</span>
+                  <span className="text-sm sm:text-base font-semibold text-[#34c759]">~{dailyInvoicesEst.toLocaleString()} فاتورة/يوم</span>
                 </div>
 
-                <div className="bg-white/[0.06] p-4 rounded-2xl flex justify-between items-center border border-white/[0.05]">
+                <div className="bg-white/[0.06] p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex justify-between items-center border border-white/[0.05]">
                   <span className="text-[#86868b]">الوقت الموفر يومياً في التصفية:</span>
-                  <span className="text-base font-semibold text-[#ff9500]">~{settlementTimeSaved} دقيقة</span>
+                  <span className="text-sm sm:text-base font-semibold text-[#ff9500]">~{settlementTimeSaved} دقيقة</span>
                 </div>
 
-                <div className="bg-white/[0.06] p-4 rounded-2xl flex justify-between items-center border border-white/[0.05]">
+                <div className="bg-white/[0.06] p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex justify-between items-center border border-white/[0.05]">
                   <span className="text-[#86868b]">تقليل الهدر بنظام FEFO:</span>
-                  <span className="text-base font-semibold text-[#2997ff]">أكثر من {wasteReductionPct}%</span>
+                  <span className="text-sm sm:text-base font-semibold text-[#2997ff]">أكثر من {wasteReductionPct}%</span>
                 </div>
               </div>
             </div>
@@ -162,7 +162,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
             <div className="space-y-3 pt-4 border-t border-white/[0.08]">
               <button
                 onClick={onOpenDemo}
-                className="w-full py-3.5 rounded-full font-medium text-white bg-[#0071e3] hover:bg-[#0077ed] transition shadow-xs flex items-center justify-center gap-1.5 text-sm cursor-pointer"
+                className="w-full py-3.5 rounded-full font-medium text-white bg-[#0071e3] hover:bg-[#0077ed] transition shadow-xs flex items-center justify-center gap-1.5 text-sm cursor-pointer min-h-[44px]"
               >
                 <span>طلب دراسة متطلبات شركتك</span>
                 <ChevronLeft className="w-4 h-4" />

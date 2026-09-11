@@ -26,10 +26,10 @@ export const Footer: React.FC<FooterProps> = ({ onScrollTo, onOpenDemo }) => {
         </div>
 
         {/* Apple Directory Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           
           {/* Brand Col */}
-          <div className="col-span-2 space-y-3">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => onScrollTo('hero')}>
               <Almoq3Logo size={22} />
               <span className="font-semibold text-sm text-[#1d1d1f] dark:text-[#f5f5f7]">

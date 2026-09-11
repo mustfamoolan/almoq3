@@ -93,8 +93,8 @@ export const PlatformsSection: React.FC<PlatformsSectionProps> = ({ onOpenDemo }
         </div>
 
         {/* Apple-style Detailed Showcase Card for Selected Platform */}
-        <div className="bg-white dark:bg-[#161617] rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-8 sm:p-12 shadow-sm text-right">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="bg-white dark:bg-[#161617] rounded-[28px] sm:rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-10 lg:p-12 shadow-sm text-right">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             
             <div className="lg:col-span-7 space-y-6">
               <div>
@@ -120,7 +120,7 @@ export const PlatformsSection: React.FC<PlatformsSectionProps> = ({ onOpenDemo }
                 <h4 className="text-xs font-semibold text-[#86868b] uppercase tracking-wider mb-3">
                   أبرز الإمكانيات والوظائف الميدانية
                 </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                   {selectedPlatform.features.map((feat, idx) => (
                     <div
                       key={idx}
@@ -135,14 +135,14 @@ export const PlatformsSection: React.FC<PlatformsSectionProps> = ({ onOpenDemo }
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-wrap gap-4 items-center">
+              <div className="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
                 <button
                   onClick={onOpenDemo}
-                  className="bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium text-xs sm:text-sm px-6 py-2.5 rounded-full transition-all shadow-xs cursor-pointer"
+                  className="w-full sm:w-auto bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium text-xs sm:text-sm px-6 py-3 sm:py-2.5 rounded-full transition-all shadow-xs cursor-pointer min-h-[44px] flex items-center justify-center"
                 >
                   طلب تجربة {selectedPlatform.titleAr}
                 </button>
-                <div className="text-xs text-[#86868b] font-mono">
+                <div className="text-xs text-[#86868b] font-mono text-center sm:text-right">
                   البنية البرمجية: <span className="text-[#1d1d1f] dark:text-[#f5f5f7]">{selectedPlatform.techStack}</span>
                 </div>
               </div>

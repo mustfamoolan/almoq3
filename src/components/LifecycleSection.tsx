@@ -30,14 +30,14 @@ export const LifecycleSection: React.FC<LifecycleSectionProps> = ({ onSelectModu
         </div>
 
         {/* Apple Segmented Stepper Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-3 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-3 mb-8 sm:mb-10">
           {OPERATION_CYCLE_STEPS.map((step, idx) => {
             const isActive = idx === activeStepIndex;
             return (
               <button
                 key={step.step}
                 onClick={() => setActiveStepIndex(idx)}
-                className={`p-3.5 rounded-[20px] text-right transition-all duration-200 cursor-pointer border flex flex-col justify-between ${
+                className={`p-3 sm:p-3.5 rounded-2xl sm:rounded-[20px] text-right transition-all duration-200 cursor-pointer border flex flex-col justify-between min-h-[70px] sm:min-h-[80px] ${
                   isActive
                     ? 'bg-white dark:bg-[#1c1c1e] border-[#0071e3] dark:border-[#2997ff] shadow-sm'
                     : 'bg-white/60 dark:bg-[#161617]/60 border-black/[0.06] dark:border-white/[0.08] hover:bg-white dark:hover:bg-[#1c1c1e]'
@@ -55,7 +55,7 @@ export const LifecycleSection: React.FC<LifecycleSectionProps> = ({ onSelectModu
                     <DynamicIcon name={step.icon} className="w-4 h-4" />
                   </div>
                 </div>
-                <div className={`text-xs leading-snug line-clamp-2 ${
+                <div className={`text-[11px] sm:text-xs leading-snug line-clamp-2 ${
                   isActive ? 'font-semibold text-[#1d1d1f] dark:text-[#f5f5f7]' : 'text-[#86868b]'
                 }`}>
                   {step.title}
@@ -66,7 +66,7 @@ export const LifecycleSection: React.FC<LifecycleSectionProps> = ({ onSelectModu
         </div>
 
         {/* Active Stage Apple Card */}
-        <div className="bg-white dark:bg-[#161617] rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-8 sm:p-12 shadow-sm text-right">
+        <div className="bg-white dark:bg-[#161617] rounded-[28px] sm:rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-10 lg:p-12 shadow-sm text-right">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             
             <div className="lg:col-span-8 space-y-6">

@@ -55,11 +55,11 @@ export const RoadmapSection: React.FC = () => {
         </div>
 
         {/* Apple Segmented Status Filter */}
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-[#161617] p-2 rounded-full border border-black/[0.06] dark:border-white/[0.08] mb-10 max-w-2xl mx-auto shadow-xs">
-          <div className="flex items-center gap-1 text-xs">
+        <div className="flex items-center justify-between gap-3 bg-white dark:bg-[#161617] p-1.5 sm:p-2 rounded-2xl sm:rounded-full border border-black/[0.06] dark:border-white/[0.08] mb-8 sm:mb-10 max-w-2xl mx-auto shadow-xs overflow-x-auto scrollbar-none">
+          <div className="flex items-center gap-1 text-xs whitespace-nowrap">
             <button
               onClick={() => setStatusFilter('all')}
-              className={`px-4 py-1.5 rounded-full font-medium transition cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 rounded-full font-medium transition cursor-pointer min-h-[36px] ${
                 statusFilter === 'all' 
                   ? 'bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-[#1d1d1f] shadow-xs' 
                   : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white'
@@ -69,7 +69,7 @@ export const RoadmapSection: React.FC = () => {
             </button>
             <button
               onClick={() => setStatusFilter('completed')}
-              className={`px-4 py-1.5 rounded-full font-medium transition cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 rounded-full font-medium transition cursor-pointer min-h-[36px] ${
                 statusFilter === 'completed' 
                   ? 'bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-[#1d1d1f] shadow-xs' 
                   : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white'
@@ -79,7 +79,7 @@ export const RoadmapSection: React.FC = () => {
             </button>
             <button
               onClick={() => setStatusFilter('in_progress')}
-              className={`px-4 py-1.5 rounded-full font-medium transition cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 rounded-full font-medium transition cursor-pointer min-h-[36px] ${
                 statusFilter === 'in_progress' 
                   ? 'bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-[#1d1d1f] shadow-xs' 
                   : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white'
@@ -89,7 +89,7 @@ export const RoadmapSection: React.FC = () => {
             </button>
             <button
               onClick={() => setStatusFilter('planned')}
-              className={`px-4 py-1.5 rounded-full font-medium transition cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 rounded-full font-medium transition cursor-pointer min-h-[36px] ${
                 statusFilter === 'planned' 
                   ? 'bg-[#1d1d1f] dark:bg-[#f5f5f7] text-white dark:text-[#1d1d1f] shadow-xs' 
                   : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white'
@@ -99,7 +99,7 @@ export const RoadmapSection: React.FC = () => {
             </button>
           </div>
 
-          <div className="text-xs text-[#0071e3] dark:text-[#2997ff] font-medium px-4 hidden sm:block">
+          <div className="text-xs text-[#0071e3] dark:text-[#2997ff] font-medium px-4 hidden md:block whitespace-nowrap">
             المرحلة الحالية: Phase 2
           </div>
         </div>
@@ -155,7 +155,7 @@ export const RoadmapSection: React.FC = () => {
         </div>
 
         {/* Selected Phase Inspector Card */}
-        <div className="bg-white dark:bg-[#161617] rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-8 sm:p-10 shadow-sm text-right">
+        <div className="bg-white dark:bg-[#161617] rounded-[24px] sm:rounded-[32px] border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-10 shadow-sm text-right">
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-black/[0.06] dark:border-white/[0.08] pb-4 mb-6">
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#0071e3] text-white">
